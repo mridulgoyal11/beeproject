@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+<body>
+    <h1>Welcome, <span id="username"></span>!</h1>
+    <h2>Your Profile</h2>
+    <div>
+        <img id="profilePicture" src="" alt="Profile Picture" style="max-width: 150px; max-height: 150px;">
+    </div>
+    <p>Username: <span id="usernameDetails"></span></p>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const username = localStorage.getItem('username');
+        const profilePicture = localStorage.getItem('profilePicture');
+
+        document.getElementById('username').textContent = username;
+        document.getElementById('usernameDetails').textContent = username;
+        document.getElementById('profilePicture').src = profilePicture ? profilePicture : '/uploads/default.png';
+    });
+</script>
+</html>

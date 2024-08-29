@@ -14,5 +14,20 @@
   {
     "username": "mridul23",
     "password": "dd"
+  },
+  {
+    "username": "ff",
+    "password": "12",
+    "profilePicture": null
+  },
+  {
+    "username": "ff12",
+    "password": "12",
+    "profilePicture": "/uploads/profilePicture-1724915790554-341050352.png"
+  },
+  {
+    "username": "ff123",
+    "password": "123",
+    "profilePicture": "/uploads/profilePicture-1724915911209-337388670.png"
   }
 ]
