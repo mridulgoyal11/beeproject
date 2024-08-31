@@ -29,13 +29,14 @@ router.post('/', (req, res) => {
 
     if (user) {
         // Send user details to the profile page
-        res.send(`
-            <script>
-                localStorage.setItem('username', '${username}');
-                localStorage.setItem('profilePicture', '${user.profilePicture || '/uploads/default.png'}');
-                window.location.href = '/profile';
-            </script>
-        `);
+        // res.send(`
+        //     <script>
+        //         localStorage.setItem('username', '${username}');
+        //         localStorage.setItem('profilePicture', '${user.profilePicture || '/uploads/default.png'}');
+        //         window.location.href = '/profile';
+        //     </script>
+        // `);
+        res.sendFile(path.join(__dirname, '../views', 'signedin.html'));
     } else {
         res.send('Invalid username or password.');
     }
